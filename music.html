@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="music.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20220713/ourmid/pngtree-red-color-music-logo-design-png-image_5927860.png">
+</head>
+<body>
+
+  <!-- ===== Sidebar ===== -->
+  <div class="sidebar">
+    <h2>Music-Player</h2>
+
+    <div class="menu-item active">
+      <a href="music.html">🏠 Home</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="library.html">📂 Your Library</a>
+    </div>
+
+    <hr> <!-- Divider -->
+
+    <div class="menu-item">
+      <a href="fav.html">❤️ Favorites (<span id="fav-count">0</span>)</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="playlist.html">🎵 Playlist (<span id="playlist-count">0</span>)</a>
+    </div>
+  </div>
+
+  <!-- ===== Main Content ===== -->
+  <div class="main">
+    <h1>Songs List</h1>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="🔍 Search by singer, genre, or song name">
+    </div>
+
+    <!-- Songs Grid -->
+    <div class="songs">
+
+      <!-- Song 1 -->
+      <div class="card" id="song1">
+        <div class="cover">
+          <img src="https://i.ytimg.com/vi/2qCpY38ompo/maxresdefault.jpg" alt="Monica Cover">
+        </div>
+        <h3>Monica</h3>
+        <p>Genre: Action / Coolie</p>
+        <p>Singer: Sublahshini and Anirudh</p>
+        <audio controls>
+          <source src="https://www.masstamilan.dev/downloader/NXczARRnJImi6ms6MsQ7ng/1758043645/d320_cdn/39863/MjQwOTo0MGY0OjQwZGU6ZmZjNDo4MDAwOjo=.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Song 2 -->
+      <div class="card" id="song2">
+        <div class="cover">
+          <img src="https://i.ytimg.com/vi/QMu5nTORP2M/maxresdefault.jpg" alt="Kooki Cover">
+        </div>
+        <h3>Kokki</h3>
+        <p>Genre: Action / Coolie</p>
+        <p>Singer: Sooraj Santhosh</p>
+        <audio controls>
+          <source src="https://www.masstamilan.dev/downloader/tzo5xP_eYc9Gb_xQ1KnZqg/1758042889/d320_cdn/40005/MjQwNToyMDE6ZTA3MjpiMDBhOmY0M2Y6OThjOjkwMDo5YjY0.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Song 3 -->
+      <div class="card" id="song3">
+        <div class="cover">
+          <img src="https://i.ytimg.com/vi/OXHTlMPbX7o/sddefault.jpg" alt="Powerhouse Cover">
+        </div>
+        <h3>Powerhouse</h3>
+        <p>Genre: Action / Coolie</p>
+        <p>Singer: Anirudh</p>
+        <audio controls>
+          <source src="https://www.masstamilan.dev/downloader/NXczARRnJImi6ms6MsQ7ng/1758043645/d320_cdn/39929/MjQwOTo0MGY0OjQwZGU6ZmZjNDo4MDAwOjo=.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Song 4 -->
+      <div class="card" id="song4">
+        <div class="cover">
+          <img src="https://cinemachaat.com/wp-content/uploads/2015/01/poster.jpg" alt="Ennodu Nee Irundhal Cover">
+        </div>
+        <h3>Ennodu Nee Irundhal</h3>
+        <p>Genre: Emotional / I</p>
+        <p>Singer: Sid Sriram, Sunitha</p>
+        <audio controls>
+          <source src="https://www.masstamilan.dev/downloader/qWalMti1cAKu1dXEMcRGYA/1758043711/d320_cdn/4644/MjQwOTo0MGY0OjMwNDU6MmJhNDo0YzA1OmQ3ZmY6ZmU0Nzo3Mzdm.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Song 5 -->
+      <div class="card" id="song5">
+        <div class="cover">
+          <img src="https://i.ytimg.com/vi/bc1qalZFnHc/mqdefault.jpg" alt="Odi Odi Utkalantha Jothiyai Cover">
+        </div>
+        <h3>Odi Odi Odi Utkalantha Jothiyai</h3>
+        <p>Genre: Devotional</p>
+        <p>Singer: Gold Devaraj</p>
+        <audio controls>
+          <source src="https://pagallworld.co.in/wp-content/uploads/2023/04/Odi-Odi-Utkalantha.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Song 6 -->
+      <div class="card" id="song6">
+        <div class="cover">
+          <img src="https://i.ytimg.com/vi/IqwIOlhfCak/maxresdefault.jpg" alt="Badass Cover">
+        </div>
+        <h3>Badass</h3>
+        <p>Genre: Action / Leo</p>
+        <p>Singer: Anirudh</p>
+        <audio controls>
+          <source src="https://www.masstamilan.dev/downloader/N5Qk-jIvUUsab6oUk12V7w/1758043475/d320_cdn/24859/MjQwOTo0MDhkOjRlYzM6NTk1ZDo6YWJjOTo2NTEy.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Song 7 -->
+      <div class="card" id="song7">
+        <div class="cover">
+          <img src="https://i.ytimg.com/vi/3wDiqlTNlfQ/maxresdefault.jpg" alt="Naa Ready Cover">
+        </div>
+        <h3>Naa Ready Dha Varuva</h3>
+        <p>Genre: Action / Leo</p>
+        <p>Singer: Anirudh / Asal Kolaar</p>
+        <audio controls>
+          <source src="https://www.masstamilan.dev/downloader/NMlPOguOHIdFcvy7Ap5E7g/1758043410/d320_cdn/24856/MjQwOTo0MGY0OjEwMGI6M2IzNzoyMDA3OjFmZmY6ZmU2NDoyNDg=.mp3" type="audio/mpeg">
+        </audio>
+        <button>Add to Playlist</button>
+        <span class="fav">♡</span>
+      </div>
+
+      <!-- Add more songs as needed -->
+
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="music.js"></script>
+
+</body>
+</html>

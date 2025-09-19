@@ -1,0 +1,258 @@
+/* ===== Body & Layout ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #4A148C, #880E4F);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  padding: 20px;
+  margin: 0;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 280px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sidebar hr {
+  border: 0;
+  height: 1px;
+  background-color: #555;
+  margin: 5px 0 10px 0;
+}
+
+.menu-item {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== Main Content ===== */
+.main {
+  flex: 1;
+  padding: 30px;
+  margin-left: 320px;
+}
+
+.main h1 {
+  margin-bottom: 20px;
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+}
+
+/* ===== Songs Grid ===== */
+.songs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cover {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* General audio player size */
+audio {
+  margin: 10px 0;
+  width: 280px;
+  height: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Progress bar */
+audio::-webkit-media-controls-timeline {
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  height: 4px;
+  border-radius: 4px;
+  padding: 0;
+}
+
+/* Time text */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: black;
+  margin-right: 1%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Play button */
+audio::-webkit-media-controls-play-button {
+  background-color: #9C27B0;
+  border-radius: 50%;
+  padding: 6px;
+  color: white;
+}
+
+/* Volume slider */
+audio::-webkit-media-controls-volume-slider {
+  
+  border-radius: 6px;
+  height: 4px;
+}
+
+/* Mute button */
+audio::-webkit-media-controls-mute-button {
+  background-color: transparent;
+  color: white;
+}
+
+
+/* ===== Buttons ===== */
+button {
+  background: linear-gradient(to bottom, #4A148C, #880E4F);
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #6a1b9a, #d81b60);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button.in-playlist {
+  background: linear-gradient(to bottom, #6a1b9a, #d81b60);
+  color: white;
+}
+
+button.in-playlist:hover {
+  background: linear-gradient(to bottom, #4A148C, #880E4F);
+}
+
+/* ===== Favorites ===== */
+.fav {
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.fav.active {
+  color: red;
+}
+
+/* ===== Text ===== */
+p {
+  text-transform: capitalize;
+  color: rgb(195, 195, 195);
+}
+
+.cover,
+h3 {
+  margin: 10px 0;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #4A148C, #880E4F);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6a1b9a, #d81b60);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4A148C, #880E4F);
+}
+
+/* ===== Utility ===== */
+.hidden {
+  display: none !important;
+}

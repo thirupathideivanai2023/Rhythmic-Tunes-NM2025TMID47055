@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playlist</title>
+  <link rel="stylesheet" href="playlist.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20220713/ourmid/pngtree-red-color-music-logo-design-png-image_5927860.png">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Music-Player</h2>
+    <div class="menu-item"><a href="music.html">🏠 Home</a></div>
+    <div class="menu-item"><a href="library.html">📂 Your Library </a></div>
+    <hr>
+    <div class="menu-item"><a href="fav.html">❤️ Favorites (<span id="fav-count">0</span>)</a></div>
+    <div class="menu-item active"><a href="playlist.html">🎵 Playlist (<span id="playlist-count">0</span>)</a></div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <h1>Your Playlist</h1>
+    <table id="playlist-table" border="1" cellpadding="8">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Singer</th>
+          <th>Preview</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Songs will load here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="playlist.js"></script>
+</body>
+</html>
